@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project(googlyBot)
+find_package(OpenCV REQUIRED)
+add_executable(googly-bot googly-bot.cpp)
+target_link_libraries(googly-bot ${OpenCV_LIBS})
