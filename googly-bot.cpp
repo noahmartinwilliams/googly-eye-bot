@@ -22,7 +22,7 @@ int main(int argc, char **argv)
 	cvtColor(image, gray_image, CV_BGR2GRAY);
 	equalizeHist(gray_image, gray_image);
 
-	cascade.detectMultiScale(gray_image, eyes, 1.1, 2, 0 | CV_HAAR_SCALE_IMAGE, Size(30, 30));
+	cascade.detectMultiScale(gray_image, eyes, 1.1, 7, 0 | CV_HAAR_SCALE_IMAGE, Size(30, 30));
 	for (size_t i = 0; i < eyes.size(); i++) {
 		Point center(eyes[i].x + eyes[i].width * 0.5, eyes[i].y + eyes[i].height * 0.5);
 		double radius=sqrt((0.25*eyes[i].width*eyes[i].width)+(0.25*eyes[i].height*eyes[i].height));
